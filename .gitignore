@@ -1,0 +1,16 @@
+.deps
+*.aux
+#*.acn
+#*.acr
+#*.alg
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+example.pdf
+*.run.xml
+*.toc
+#*.xdy
