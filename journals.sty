@@ -1,0 +1,243 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                         December 4, 2002
+%
+%  journals.sty - A LaTeX style file for easy links to electronic preprint 
+%                 archives 
+%                                 Stefan Stonjek  <s.stonjek@physics.ox.ac.uk>
+%                                 Martin Hennecke <hennecke@fnal.gov>
+%
+%  These journal definitions were extracted from the JHEP style file JHEP3.cls
+%  available from  http://jhep.cern.ch/
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesClass{journals} [2002/12/02 v1.0 LaTeX document class]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\@spires#1{\href{http://www-spires.slac.stanford.edu/spires/find/hep/www?j=#1}} 
+%                               	%PITY THAT target IS NOT IMPLEMENTED.
+\catcode`\%=12
+\catcode`\|=14
+\newcommand\apa[3]    {\@spires{APASA%2C#1%2C#3}
+		{{\it Acta Phys.\ Austriaca }{\bf #1} (#2) #3}}
+\newcommand\apas[3]    {\@spires{APAUA%2C#1%2C#3}
+		{{\it Acta Phys.\ Austriaca, Suppl.\ }{\bf #1} (#2) #3}}
+\newcommand\appol[3] {\@spires{APPOA%2C#1%2C#3}
+		{{\it Acta Phys.\ Polon.\ }{\bf #1} (#2) #3}}
+\newcommand\advm[3]  {\@spires{ADMTA%2C#1%2C#3}
+		{{\it Adv.\ Math.\ }{\bf #1} (#2) #3}}
+\newcommand\adnp[3]   {\@spires{ANUPB%2C#1%2C#3}
+		{{\it Adv.\ Nucl.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\adp[3]   {\@spires{ADPHA%2C#1%2C#3}
+		{{\it Adv.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\atmp[3] {\@spires{00203%2C#1%2C#3}
+		{{\it Adv.\ Theor.\ Math.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\am[3]    {\@spires{ANMAA%2C#1%2C#3}
+		{{\it Ann.\ Math.\ }{\bf #1} (#2) #3}}
+\newcommand\ap[3]    {\@spires{APNYA%2C#1%2C#3}
+		{{\it Ann.\ Phys.\ (NY) }{\bf #1} (#2) #3}}
+\newcommand\araa[3] {\@spires{ARAAA%2C#1%2C#3}
+		{{\it Ann.\ Rev.\ Astron.\ \& Astrophys.\ }{\bf #1} (#2) #3}}
+\newcommand\arnps[3] {\@spires{ARNUA%2C#1%2C#3}
+		{{\it Ann.\ Rev.\ Nucl.\ Part.\ Sci.\ }{\bf #1} (#2) #3}}
+\newcommand\asas[3]   {\@spires{AAEJA%2C#1%2C#3}
+		{{\it Astron.\ Astrophys.\ }{\bf #1} (#2) #3}}
+\newcommand\asj[3]   {\@spires{ANJOA%2C#1%2C#3}
+		{{\it Astron.\ J.\ }{\bf #1} (#2) #3}}
+\newcommand\app[3]   {\@spires{APHYE%2C#1%2C#3}
+		{{\it Astropart.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\apj[3]    {\@spires{ASJOA%2C#1%2C#3}
+		{{\it Astrophys.\ J. }{\bf #1} (#2) #3}}
+\newcommand\baas[3]   {\@spires{AASBA%2C#1%2C#3}
+		{{\it Bull.\ Am.\ Astron.\ Soc.\ }{\bf #1} (#2) #3}}
+\newcommand\bams[3]   {\@spires{BAMOA%2C#1%2C#3}
+		{{\it Bull.\ Am.\ Math.\ Soc.\ }{\bf #1} (#2) #3}}
+\newcommand\blms[3]   {\@spires{LMSBB%2C#1%2C#3}
+		{{\it Bull.\ London Math.\ Soc.\ }{\bf #1} (#2) #3}}
+\newcommand\cjm[3]  {\@spires{CJMAA%2C#1%2C#3}
+		{{\it Can.\ J.\ Math.\ }{\bf #1} (#2) #3}}
+\newcommand\cqg[3]   {\@spires{CQGRD%2C#1%2C#3}
+		{{\it Class.\ and Quant.\ Grav.\ }{\bf #1} (#2) #3}}
+\newcommand\cmp[3]   {\@spires{CMPHA%2C#1%2C#3}
+		{{\it Commun.\ Math.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\ctp[3]   {\@spires{CTPMD%2C#1%2C#3}
+		{{\it Commun.\ Theor.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\cag[3]   {\@spires{00142%2C#1%2C#3}
+		{{\it Commun.\ Anal.\ Geom.\ }{\bf #1} (#2) #3}}
+\newcommand\cpam[3]   {\@spires{CPAMA%2C#1%2C#3}
+		{{\it Commun.\ Pure Appl.\ Math.\ }{\bf #1} (#2) #3}}
+\newcommand\cpc[3]   {\@spires{CPHCB%2C#1%2C#3}
+		{{\it Comput.\ Phys.\ Commun.\ }{\bf #1} (#2) #3}}
+\newcommand\dmj[3]   {\@spires{DUMJA%2C#1%2C#3}
+		{{\it Duke Math.\ J. }{\bf #1} (#2) #3}}
+\newcommand\epjc[3]  {\@spires{EPHJA%2CC#1%2C#3}
+		{{\it Eur.\ Phys.\ J. }{\bf C #1} (#2) #3}}
+\newcommand\epjd[3]  {\@spires{EPHJD%2CC#1%2C#3}
+		{{\it Eur.\ Phys.\ J. Direct.\ }{\bf C #1} (#2) #3}}
+\newcommand\epl[3]    {\@spires{EULEE%2C#1%2C#3}
+		{{\it Europhys.\ Lett. }{\bf #1} (#2) #3}}
+\newcommand\forp[3]    {\@spires{FPYKA%2C#1%2C#3}
+		{{\it Fortschr.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\faa[3]    {\@spires{FAAPB%2C#1%2C#3}
+		{{\it Funct.\ Anal.\ Appl.\ }{\bf #1} (#2) #3}}
+\newcommand\grg[3]    {\@spires{GRGVA%2C#1%2C#3}
+		{{\it Gen.\ Rel.\ Grav.\ }{\bf #1} (#2) #3}}
+\newcommand\hpa[3]   {\@spires{HPACA%2C#1%2C#3}
+		{{\it Helv.\ Phys.\ Acta }{\bf #1} (#2) #3}}
+\newcommand\ijmpa[3] {\@spires{IMPAE%2CA#1%2C#3}
+		{{\it Int.\ J.\ Mod.\ Phys.\ }{\bf A #1} (#2) #3}}
+\newcommand\ijmpb[3] {\@spires{IMPAE%2CB#1%2C#3}
+		{{\it Int.\ J.\ Mod.\ Phys.\ }{\bf B #1} (#2) #3}}
+\newcommand\ijmpc[3] {\@spires{IMPAE%2CC#1%2C#3}
+		{{\it Int.\ J.\ Mod.\ Phys.\ }{\bf C #1} (#2) #3}}
+\newcommand\ijmpd[3] {\@spires{IMPAE%2CD#1%2C#3}
+		{{\it Int.\ J.\ Mod.\ Phys.\ }{\bf D #1} (#2) #3}}
+\newcommand\ijtp[3] {\@spires{IJTPB%2CB#1%2C#3}
+		{{\it Int.\ J.\ Theor.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\invm[3]  {\@spires{INVMB%2C#1%2C#3}
+		{{\it Invent.\ Math.\ }{\bf #1} (#2) #3}}
+\newcommand\jag[3]   {\@spires{00124%2C#1%2C#3}
+		{{\it J.\ Alg.\ Geom.\ }{\bf #1} (#2) #3}}
+\newcommand\jams[3]   {\@spires{00052%2C#1%2C#3}
+		{{\it J.\ Am.\ Math.\ Soc.\ }{\bf #1} (#2) #3}}
+\newcommand\jap[3]   {\@spires{JAPIA%2C#1%2C#3}
+		{{\it J.\ Appl.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\jdg[3]   {\@spires{JDGEA%2C#1%2C#3}
+		{{\it J.\ Diff.\ Geom.\ }{\bf #1} (#2) #3}}
+\newcommand\jgp[3]   {\@spires{JGPHE%2C#1%2C#3}
+		{{\it J.\ Geom.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\jhep[3]  {\href{http://jhep.sissa.it/stdsearch?paper=#1%28#2%29#3}
+		{{\it J. High Energy Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\jmp[3]   {\@spires{JMAPA%2C#1%2C#3}
+		{{\it J.\ Math.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\joth[3]  {\@spires{JOTHE%2C#1%2C#3}
+		{{\it J.\ Operator Theory }{\bf #1} (#2) #3}}
+\newcommand\jpha[3]   {\@spires{JPAGB%2CA#1%2C#3}
+		{{\it J. Phys.\ }{\bf A #1} (#2) #3}}
+\newcommand\jphc[3]   {\@spires{JPAGB%2CC#1%2C#3}
+		{{\it J. Phys.\ }{\bf C #1} (#2) #3}}
+\newcommand\jphg[3]   {\@spires{JPAGB%2CG#1%2C#3}
+		{{\it J. Phys.\ }{\bf G #1} (#2) #3}}
+\newcommand\lmp[3]   {\@spires{LMPHD%2CA#1%2C#3}
+		{{\it Lett.\ Math.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\ncl[3]    {\@spires{NCLTA%2C#1%2C#3}
+		{{\it Lett.\ Nuovo Cim.\ }{\bf #1} (#2) #3}}
+\newcommand\matan[3]  {\@spires{MAANA%2CA#1%2C#3}
+		{{\it Math.\ Ann.\ }{\bf #1} (#2) #3}}
+\newcommand\mussr[3]  {\@spires{MUSIA%2CA#1%2C#3}
+		{{\it Math.\ USSR Izv.\ }{\bf #1} (#2) #3}}
+\newcommand\mams[3]  {\@spires{MAMCA%2CA#1%2C#3}
+		{{\it Mem.\ Am.\ Math.\ Soc.\ }{\bf #1} (#2) #3}}
+\newcommand\mpla[3]  {\@spires{MPLAE%2CA#1%2C#3}
+		{{\it Mod.\ Phys.\ Lett.\ }{\bf A #1} (#2) #3}}
+\newcommand\mplb[3]  {\@spires{MPLAE%2CB#1%2C#3}
+		{{\it Mod.\ Phys.\ Lett.\ }{\bf B #1} (#2) #3}}
+\newcommand\nature[3]  {\@spires{NATUA%2C#1%2C#3}
+		{{\it Nature }{\bf #1} (#2) #3}}
+\newcommand\nim[3]   {\@spires{NUIMA%2C#1%2C#3}
+		{{\it Nucl.\ Instrum.\ Meth.\ }{\bf #1} (#2) #3}}
+\newcommand\npa[3]   {\@spires{NUPHA%2CA#1%2C#3}
+		{{\it Nucl.\ Phys.\ }{\bf A #1} (#2) #3}}
+\newcommand\npb[3]    {\@spires{NUPHA%2CB#1%2C#3}
+		{{\it Nucl.\ Phys.\ }{\bf B #1} (#2) #3}}
+\newcommand\npps[3]  {\@spires{NUPHZ%2C#1%2C#3}
+		{{\it Nucl.\ Phys.\ }{\bf #1} {\it(Proc.\ Suppl.)} (#2) #3}}
+\newcommand\nc[3]    {\@spires{NUCIA%2C#1%2C#3}
+		{{\it Nuovo Cim.\ }{\bf #1} (#2) #3}}
+\newcommand\ncs[3]  {\@spires{NUCUA%2C#1%2C#3}
+		{{\it Nuovo Cim.\ Suppl.\ }{\bf #1} (#2) #3}}
+\newcommand\pan[3]  {\@spires{PANUE%2C#1%2C#3}
+		{{\it Phys.\ Atom.\ Nucl.\ }{\bf #1} (#2) #3}}
+\newcommand\pla[3]   {\@spires{PHLTA%2CA#1%2C#3}
+		{{\it Phys.\ Lett.\ }{\bf A #1} (#2) #3}}
+\newcommand\plb[3]   {\@spires{PHLTA%2CB#1%2C#3}
+		{{\it Phys.\ Lett.\ }{\bf B #1} (#2) #3}}
+\newcommand\pr[3]    {\@spires{PHRVA%2C#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf #1} (#2) #3}}
+\newcommand\pra[3]   {\@spires{PHRVA%2CA#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf A #1} (#2) #3}}
+\newcommand\prb[3]   {\@spires{PHRVA%2CB#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf B #1} (#2) #3}}
+\newcommand\prc[3]   {\@spires{PHRVA%2CC#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf C #1} (#2) #3}}
+\newcommand\prd[3]   {\@spires{PHRVA%2CD#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf D #1} (#2) #3}}
+\newcommand\pre[3]   {\@spires{PHRVA%2CE#1%2C#3}
+		{{\it Phys.\ Rev.\ }{\bf E #1} (#2) #3}}
+\newcommand\prep[3]  {\@spires{PRPLC%2C#1%2C#3}
+		{{\it Phys.\ Rept.\ }{\bf #1} (#2) #3}}
+\newcommand\prl[3]   {\@spires{PRLTA%2C#1%2C#3}
+		{{\it Phys.\ Rev.\ Lett.\ }{\bf #1} (#2) #3}}
+\newcommand\phys[3]   {\@spires{PHYSA%2CA#1%2C#3}
+		{{\it Physica }{\bf #1} (#2) #3}}
+\newcommand\plms[3]   {\@spires{PHLTA%2CB#1%2C#3}
+		{{\it Proc.\ London Math.\ Soc.\ }{\bf B #1} (#2) #3}}
+\newcommand\pnas[3]  {\@spires{PNASA%2C#1%2C#3}
+		{{\it Proc.\ Nat.\ Acad.\ Sci.\ }{\bf #1} (#2) #3}}
+\newcommand\ppnp[3]  {\@spires{PPNPD%2C#1%2C#3}
+		{{\it Prog.\ Part.\ Nucl.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\ptp[3]   {\@spires{PTPKA%2C#1%2C#3}
+		{{\it Prog.\ Theor.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\ptps[3]   {\@spires{PTPSA%2C#1%2C#3}
+		{{\it Prog.\ Theor.\ Phys.\ Suppl.\ }{\bf #1} (#2) #3}}
+\newcommand\rmp[3]   {\@spires{RMPHA%2C#1%2C#3}
+		{{\it Rev.\ Mod.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\sjnp[3]  {\@spires{SJNCA%2C#1%2C#3}
+		{{\it Sov.\ J.\ Nucl.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\sjpn[3]  {\@spires{SJPNA%2C#1%2C#3}
+		{{\it Sov.\ J.\ Part.\ Nucl.\ }{\bf #1} (#2) #3}}
+\newcommand\jetp[3]  {\@spires{SPHJA%2C#1%2C#3}
+		{{\it Sov.\ Phys.\ JETP\/ }{\bf #1} (#2) #3}}
+\newcommand\jetpl[3]  {\@spires{JTPLA%2C#1%2C#3}
+		{{\it Sov.\ Phys.\ JETP Lett.\ }{\bf #1} (#2) #3}}
+\newcommand\spu[3]  {\@spires{SOPUA%2C#1%2C#3}
+		{{\it Sov.\ Phys.\ Usp.\ }{\bf #1} (#2) #3}}
+\newcommand\tmf[3]   {\@spires{TMFZA%2C#1%2C#3}
+		{{\it Teor.\ Mat.\ Fiz.\ }{\bf #1} (#2) #3}}
+\newcommand\tmp[3]   {\@spires{TMPHA%2C#1%2C#3}
+		{{\it Theor.\ Math.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\ufn[3]   {\@spires{UFNAA%2C#1%2C#3}
+		{{\it Usp.\ Fiz.\ Nauk.\ }{\bf #1} (#2) #3}}
+| }}}}}}}}}}}}}}}}}}}}}} "|" is here a comment (catcode defined above) to
+| }}}}}}}}}}}}}}}}}}}}}} include parenthesis for emacs to parse properly. 
+\newcommand\ujp[3]   {\@spires{00267%2C#1%2C#3}
+		{{\it Ukr.\ J.\ Phys.\ }{\bf #1} (#2) #3}}
+\newcommand\yf[3]    {\@spires{YAFIA%2C#1%2C#3}
+		{{\it Yad.\ Fiz.\ }{\bf #1} (#2) #3}}
+\newcommand\zpc[3]   {\@spires{ZEPYA%2CC#1%2C#3}
+		{{\it Z.\ Physik }{\bf C #1} (#2) #3}}
+\newcommand\zetf[3]  {\@spires{ZETFA%2C#1%2C#3}
+		{{\it Zh.\ Eksp.\ Teor.\ Fiz.\ }{\bf #1} (#2) #3}}
+
+\newcommand{\newjournal}[5]{\@spires{#2%2C#3%2C#5}
+		{{\it #1 }{\bf #3} (#4) #5}}
+
+\newcommand\ibid[3]{{\it ibid.\ }{\bf #1} (#2) #3}
+\catcode`\%=14
+\catcode`\|=12
+% HEPTH's: \hepth{9912999} %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\hepth}[1]{\href{http://xxx.lanl.gov/abs/hep-th/#1}{\tt hep-th/#1}}
+\newcommand{\hepph}[1]{\href{http://xxx.lanl.gov/abs/hep-ph/#1}{\tt hep-ph/#1}}
+\newcommand{\heplat}[1]{\href{http://xxx.lanl.gov/abs/hep-lat/#1}{\tt hep-lat/#1}}
+\newcommand{\hepex}[1]{\href{http://xxx.lanl.gov/abs/hep-ex/#1}{\tt hep-ex/#1}}
+\newcommand{\nuclth}[1]{\href{http://xxx.lanl.gov/abs/nucl-th/#1}{\tt nucl-th/#1}}
+\newcommand{\nuclex}[1]{\href{http://xxx.lanl.gov/abs/nucl-ex/#1}{\tt nucl-ex/#1}}
+\newcommand{\grqc}[1]{\href{http://xxx.lanl.gov/abs/gr-qc/#1}{\tt gr-qc/#1}}
+\newcommand{\qalg}[1]{\href{http://xxx.lanl.gov/abs/q-alg/#1}{\tt q-alg/#1}}
+\newcommand{\accphys}[1]{\href{http://xxx.lanl.gov/abs/accphys/#1}{\tt accphys/#1}}
+\newcommand{\alggeom}[1]{\href{http://xxx.lanl.gov/abs/alg-geom/#1}{\tt alg-geom/#1}}
+\newcommand{\astroph}[1]{\href{http://xxx.lanl.gov/abs/astro-ph/#1}{\tt astro-ph/#1}}
+\newcommand{\chaodyn}[1]{\href{http://xxx.lanl.gov/abs/chao-dyn/#1}{\tt chao-dyn/#1}}
+\newcommand{\condmat}[1]{\href{http://xxx.lanl.gov/abs/cond-mat/#1}{\tt cond-mat/#1}}
+\newcommand{\nlinsys}[1]{\href{http://xxx.lanl.gov/abs/nlin-sys/#1}{\tt nlin-sys/#1}}
+\newcommand{\quantph}[1]{\href{http://xxx.lanl.gov/abs/quant-ph/#1}{\tt quant-ph/#1}}
+\newcommand{\solvint}[1]{\href{http://xxx.lanl.gov/abs/solv-int/#1}{\tt solv-int/#1}}
+\newcommand{\suprcon}[1]{\href{http://xxx.lanl.gov/abs/supr-con/#1}{\tt supr-con/#1}}
+%\newcommand{\mathph}[1]{\href{http://xxx.lanl.gov/abs/math-ph/#1}{\tt math-ph/#1}}
+%\newcommand{\physics}[1]{\href{http://xxx.lanl.gov/abs/physics/#1}{\tt physics/#1}}
+\newcommand{\Math}[2]{\href{http://xxx.lanl.gov/abs/math.#1/#2}{\tt math.#1/#2}}
+
+\newcommand{\cdfnote}[1]{\href{http://www-cdf.fnal.gov/htbin/notes/cdfnoteSelGet?number=#1}{CDF Note #1}}
+
+
+
