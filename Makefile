@@ -5,7 +5,7 @@
 # -interaction=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-TARGETS = example.pdf
+TARGETS = LSSTreferences.pdf
 DEPS_DIR = .deps
 LATEXMK = latexmk -silent -recorder -use-make -deps \
                   -e 'warn qq(In Makefile, turn off custom dependencies\n);' \
