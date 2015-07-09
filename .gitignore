@@ -10,7 +10,7 @@
 *.fls
 *.log
 *.out
-example.pdf
+LSSTreferences.pdf
 *.run.xml
 *.toc
 #*.xdy
