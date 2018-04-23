@@ -1,3 +1,5 @@
+Please cite LSST references, including the LSST simulations products. This list is intended to make it easy to cite LSST!
+
 To compile (and produce `LSSTreferences.pdf`):
 ```
 > make 
